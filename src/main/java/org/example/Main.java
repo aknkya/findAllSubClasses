@@ -2,12 +2,13 @@ package org.example;
 
 import org.reflections.Reflections;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         List<Class> extendedClasses = new ArrayList<>();
 
         //Main class we searching for
@@ -20,7 +21,7 @@ public class Main {
             extendedClasses.add(subClass);
         }
         for (Class x : extendedClasses) {
-            X mobj = X.class.cast(x);
+            X mobj = (X) xClass.getConstructors()[0].newInstance();
             mobj.run();
         }
 
