@@ -20,7 +20,8 @@ public class Main {
             extendedClasses.add(subClass);
         }
         for (Class x :extendedClasses) {
-
+            X mobj = X.class.cast(x);
+            mobj.run();
         }
 
         extendedClasses.stream().forEach(x-> System.out.println(x.getName()));
