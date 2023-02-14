@@ -1,12 +1,7 @@
 package org.example;
 
-import com.google.common.base.Converter;
 import org.reflections.Reflections;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
-import org.springframework.core.type.filter.AssignableTypeFilter;
 
-import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -23,6 +18,9 @@ public class Main {
 
         for (Class<? extends X> subClass : subClasses) {
             extendedClasses.add(subClass);
+        }
+        for (Class x :extendedClasses) {
+
         }
 
         extendedClasses.stream().forEach(x-> System.out.println(x.getName()));
