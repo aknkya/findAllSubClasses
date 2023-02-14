@@ -19,12 +19,12 @@ public class Main {
         for (Class<? extends X> subClass : subClasses) {
             extendedClasses.add(subClass);
         }
-        for (Class x :extendedClasses) {
+        for (Class x : extendedClasses) {
             X mobj = X.class.cast(x);
             mobj.run();
         }
 
-        extendedClasses.stream().forEach(x-> System.out.println(x.getName()));
+        extendedClasses.stream().forEach(x -> System.out.println(x.getName()));
 
     }
 }

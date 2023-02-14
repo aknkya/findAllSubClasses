@@ -1,7 +1,10 @@
 package org.example;
 
-public abstract class X implements Runnable {
+public  class X implements Runnable {
 
 
+    @Override
+    public void run() {
 
+    }
 }
